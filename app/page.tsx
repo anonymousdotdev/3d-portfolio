@@ -23,34 +23,59 @@ export default function Home() {
   const data = [
     {
       title:"October 2023 - Present",
+      location:"Lucknow",
       content: (
         <TimelineItem
         year="2021 - Present"
-        title="Senior Full Stack Developer"
-        company="TechNova Solutions"
-        description="Leading development of enterprise web applications, mentoring junior developers, and implementing best practices across projects."
+        title="Full Stack Developer (Mobile & Web)"
+        company="HealthATM India Pvt. Ltd. (YoloHealth)"
+        description={`Spearheaded the development of the YoloHealth User App from scratch, enhancing user engagement
+in the health-tech industry.
+Utilized modern frameworks and best practices to deliver a robust and intuitive mobile application.
+Enhanced the Lucknow Smart City Web Panel, optimizing navigation and usability.`}
       />
       ),
     },
     {
-      title: "Early 2023",
+      title: "Nov 2022 - Sep 2023",
+      location:"Gurgaon",
       content: (
         <TimelineItem
         year="2021 - Present"
-        title="Senior Full Stack Developer"
-        company="TechNova Solutions"
-        description="Leading development of enterprise web applications, mentoring junior developers, and implementing best practices across projects."
+        title="Frontend Developer 1"
+        company="Z1Tech"
+        description="Contributed to the development of Product VDO.AI, focusing on the frontend aspects of the project.
+Built engaging landing pages using React, improving user retention and experience.
+Designed and optimized the VDO.AI Dashboard, ensuring functionality and performance."
       />
       ),
     },
     {
-      title: "Changelog",
+      title: "Sep 2021 - Feb 2022",
+      location:"Remote",
       content: (
         <TimelineItem
-        year="2021 - Present"
-        title="Senior Full Stack Developer"
-        company="TechNova Solutions"
-        description="Leading development of enterprise web applications, mentoring junior developers, and implementing best practices across projects."
+        year="Sep 2021 - Feb 2022"
+        title="IBM Full Stack Developer Intern"
+        company="IBM India"
+        description="Led a team of 5 in designing and developing a project selected as one of the top 3 projects.
+Contributed to both frontend and backend development, showcasing technical versatility.
+Successfully deployed the project, demonstrating expertise in full-stack development."
+      />
+      ),
+    },
+    {
+      title: "Sep 2021 - Feb 2022",
+      location:"Lucknow",
+      content: (
+        <TimelineItem
+        year="Sep 2021 - Feb 2022"
+        title="Full Stack Developer Intern"
+        company="Hindustan Aeronautics Limited Apprenticeship"
+        description="Developed and maintained internal web applications using HTML, CSS, JavaScript, and Bootstrap, significantly streamlining internal workflows and documentation processes.
+Collaborated closely with internal teams to understand user requirements, translating them into responsive and user-friendly web interfaces.
+Implemented UI enhancements and optimized existing code to improve performance and usability across various devices.
+Gained hands-on experience with version control systems like Git, and learned to work in a structured development environment."
       />
       ),
     },
