@@ -9,23 +9,19 @@ import Image from 'next/image';
 const ServicesSection = () => {
   return (
          
-         <section className="min-h-screen flex flex-col justify-center items-center px-4 py-20">
-         <div className="max-w-6xl mx-auto">
+         <section className="min-h-screen flex flex-col justify-center items-center  py-20">
+         <div className=" mx-auto">
            {/* <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500">
              Services
            </h2> */}
             <motion.div variants={textVariant()} className="mb-8">
         <p className={styles.sectionSubText}>Service that I provide!</p>
-        <h2 className={`${styles.sectionHeadText} w-full flex  gap-4`}>
+        <h2 className={`${styles.sectionHeadText} `}>
           <Title title="Services" />
-          <Image
-            src="https://em-content.zobj.net/source/microsoft-teams/337/rocket_1f680.png"
-            width={50}
-            height={20}
-          />
+        
         </h2>
       </motion.div>
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
              <MyServicesCard
                icon={<Globe className="h-10 w-10 text-cyan-400" />}
                title="Web Development"

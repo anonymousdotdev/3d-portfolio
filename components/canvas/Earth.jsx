@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
@@ -7,8 +7,17 @@ import CanvasLoader from "../sub/Loader";
 const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
 
+  useEffect(() => {
+    // Traverse the scene and hide the Clouds mesh
+    earth.scene.traverse((child) => {
+      if (child.name === "Clouds_1") {
+        child.visible = false;
+      }
+    });
+  }, [earth]);
+
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    <primitive object={earth.scene} scale={3.2} position-y={0} rotation-y={0} />
   );
 };
 
@@ -29,9 +38,9 @@ const EarthCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          enableZoom={true}
+          minPolarAngle={0}
+          maxPolarAngle={Math.PI}
         />
         <Earth />
 

@@ -281,6 +281,7 @@ import { StaticImageData } from "next/image";
     tripguide,
     threejs,
   } from "../assets";
+  import { IMAGES } from "@/public";
   
   export const navLinks = [
     {
@@ -325,6 +326,10 @@ import { StaticImageData } from "next/image";
   ];
   
   const technologies = [
+    {
+      name: "HTML 5",
+      icon: html,
+    },
     {
       name: "HTML 5",
       icon: html,

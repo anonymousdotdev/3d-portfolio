@@ -5,8 +5,7 @@ import { styles } from "../../utils/styles";
 import { services } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
-import { avatar1, avatar2, overview } from "../../assets";
-import Image from "next/image";
+import {avatar2} from "../../assets";
 import ServiceCard from "./ServiceCard";
 import Title from "./Title";
 import { Tilt } from "react-tilt";
@@ -18,13 +17,13 @@ const About = () => {
      <div className="flex md:flex-row flex-col  justify-between items-center pr-4 ">
     <div>
     <motion.div variants={textVariant()}>
-        <p className={styles.sectionHeadText}>Who I am </p>
+    <p className={styles.sectionSubText}>Who I am </p>
         <Title title={"Introduction"} />
 
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-white  text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-white  text-[17px] max-w-3xl  leading-[30px]"
       >
         I'm a Full Stack Web and Mobile App Developer with expertise in developing web applications
         using cutting-edge technologies like MongoDB, Express, React, and
@@ -36,7 +35,7 @@ const About = () => {
         life!.
       </motion.p>
     </div>
-    <Tilt className="  rounded-2xl hover:scale-50  gradient-border">
+    <Tilt className="  rounded-2xl hover:scale-50  gradient-border  md:mt-0 mt-8">
         <img src={avatar2.src} className="w-[250px] h-auto rounded-lg "/>
       </Tilt>
      </div>

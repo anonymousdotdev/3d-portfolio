@@ -1,4 +1,6 @@
 "use client";
+import { textVariant } from "@/utils/motion";
+import { styles } from "@/utils/styles";
 import {
   useMotionValueEvent,
   useScroll,
@@ -6,13 +8,76 @@ import {
   motion,
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import Title from "../sub/Title";
+import Image from "next/image";
+import { IMAGE } from "@/assets";
+import TimelineItem from "../sub/TimelineItem";
 
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
 }
-
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+const data = [
+  {
+    title:"October 2023 - Present",
+    location:"Lucknow",
+    content: (
+      <TimelineItem
+      year="2021 - Present"
+      title="Full Stack Developer (Mobile & Web)"
+      company="HealthATM India Pvt. Ltd. (YoloHealth)"
+      description={`Spearheaded the development of the YoloHealth User App from scratch, enhancing user engagement
+in the health-tech industry.
+Utilized modern frameworks and best practices to deliver a robust and intuitive mobile application.
+Enhanced the Lucknow Smart City Web Panel, optimizing navigation and usability.`}
+    />
+    ),
+  },
+  {
+    title: "Nov 2022 - Sep 2023",
+    location:"Gurgaon",
+    content: (
+      <TimelineItem
+      year="2021 - Present"
+      title="Frontend Developer 1"
+      company="Z1Tech"
+      description="Contributed to the development of Product VDO.AI, focusing on the frontend aspects of the project.
+Built engaging landing pages using React, improving user retention and experience.
+Designed and optimized the VDO.AI Dashboard, ensuring functionality and performance."
+    />
+    ),
+  },
+  {
+    title: "Sep 2021 - Feb 2022",
+    location:"Remote",
+    content: (
+      <TimelineItem
+      year="Sep 2021 - Feb 2022"
+      title="IBM Full Stack Developer Intern"
+      company="IBM India"
+      description="Led a team of 5 in designing and developing a project selected as one of the top 3 projects.
+Contributed to both frontend and backend development, showcasing technical versatility.
+Successfully deployed the project, demonstrating expertise in full-stack development."
+    />
+    ),
+  },
+  {
+    title: "Sep 2021 - Feb 2022",
+    location:"Lucknow",
+    content: (
+      <TimelineItem
+      year="Sep 2021 - Feb 2022"
+      title="Full Stack Developer Intern"
+      company="Hindustan Aeronautics Limited Apprenticeship"
+      description="Developed and maintained internal web applications using HTML, CSS, JavaScript, and Bootstrap, significantly streamlining internal workflows and documentation processes.
+Collaborated closely with internal teams to understand user requirements, translating them into responsive and user-friendly web interfaces.
+Implemented UI enhancements and optimized existing code to improve performance and usability across various devices.
+Gained hands-on experience with version control systems like Git, and learned to work in a structured development environment."
+    />
+    ),
+  },
+];
+export const Timeline = () => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -34,20 +99,20 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full  font-sans md:px-10"
+      className="  font-sans md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Changelog from my journey
-        </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
-        </p>
-      </div>
+      
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <motion.div variants={textVariant()} className="pl-4">
+        <p className={styles.sectionSubText}>What I have done so far</p>
+        <h2 className={`${styles.sectionHeadText} `}>
+          {" "}
+          <Title title="Experience" />{" "}
+         
+        </h2>
+      </motion.div>
         {data.map((item, index) => (
           <div
             key={index}

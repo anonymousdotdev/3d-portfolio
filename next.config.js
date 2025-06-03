@@ -4,6 +4,9 @@ const nextConfig = {
     domains: ["em-content.zobj.net","assets.aceternity.com"],
     
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;

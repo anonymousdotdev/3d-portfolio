@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+      fontFamily: {
+        generalsans: ['General Sans', 'sans-serif'],
+      },
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
@@ -18,6 +21,14 @@ const config: Config = {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
+				black: {
+          DEFAULT: '#000',
+          100: '#010103',
+          200: '#0E0E10',
+          300: '#1C1C21',
+          500: '#3A3A49',
+          600: '#1A1A1A',
+        },
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
@@ -65,6 +76,7 @@ const config: Config = {
   		screens: {
   			xs: '450px'
   		},
+			
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

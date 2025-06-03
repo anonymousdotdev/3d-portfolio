@@ -18,8 +18,10 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/sub/Contact.jsx", "components/sub/Loader.tsx", "components/sub/Tech.jsx", "components/sub/Experience.jsx", "components/sub/ExperienceCard.jsx"],

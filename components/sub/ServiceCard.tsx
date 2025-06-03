@@ -17,7 +17,7 @@ const ServiceCard = ({
         <Tilt className="xs:w-[250px] flex-1 rounded-2xl hover:scale-50 border w-full">
             <motion.div
                 variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-                className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+                className="w-full green-pink-gradient p-[1px] rounded-[20px] "
             >
                 <div className=" bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex items-center justify-evenly flex-col">
                     <Image src={icon} alt={title} className=" object-contain " height={100} />

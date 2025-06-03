@@ -60,17 +60,17 @@ export default function MainHero() {
   const [code] = useState(`
 const profile = {
     name: 'Shah Hussain',
-    title: 'Full-Stack Developer | UI Developer | Mobile App Developer',
+    title: 'Full-Stack Developer | Frontend Developer | Mobile App Developer ',
     skills: [
-        'React', 'NextJS', 'Redux', 'Express', 'React Native',
+        'Gen AI', 'React', 'NextJS', 'Redux', 'Express', 'React Native',
         'MySQL', 'MongoDB', 'Docker', 'Expo', 'TypeScript',
         'GraphQL', 'Git', 'Linux', 'Tailwind CSS', 'Figma',
-        'HTML', 'CSS', 'JavaScript',
+        'HTML', 'CSS', 'JavaScript', 'API Integration',
     ],
     quickLearner: true,
     problemSolver: true,
     teamPlayer: true,
-    yearsOfExperience: 3, 
+    yearsOfExperience: 4, 
     hireable: function() {
         return (
             this.teamPlayer && 
@@ -134,10 +134,10 @@ const profile = {
 
               {/* Role badge */}
               <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s">
-                <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
+                <i className="fas fa-rocket text-white animate-bounce text-sm sm:text-base"></i>
                 <span>
                   <FlipWords
-                    className={"text-lg sm:text-xl text-blue-400 font-medium"}
+                    className={"text-lg sm:text-xl text-white font-medium"}
                     words={words}
                   />
                 </span>

@@ -11,14 +11,9 @@ const Tech = () => {
     <>
       <motion.div variants={textVariant()} className="mb-8">
         <p className={styles.sectionSubText}>Technologies that I know!</p>
-        <h2 className={`${styles.sectionHeadText} w-full flex  gap-4`}>
+        <h2 className={`${styles.sectionHeadText}`}>
           <Title title="My Skills" />
-
-          <Image
-            src="https://em-content.zobj.net/source/microsoft-teams/337/rocket_1f680.png"
-            width={50}
-            height={20}
-          />
+         
         </h2>
       </motion.div>
 
